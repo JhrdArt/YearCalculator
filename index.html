@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- displays site properly based on user's device -->
+  <!-- RESSET CSS -->
+  <link rel="stylesheet" href="app.css" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png" />
+
+  <title>Frontend Mentor | Age calculator app</title>
+  <!-- script -->
+  <script defer src="./scripts.js"></script>
+</head>
+
+<body>
+  <main class="main__container">
+    <div class="main__content">
+      <form class="main__form" id="form">
+        <!-- day -->
+
+        <div class="form__day">
+          <label id="label__day" class="main__label-day" for="day">day</label>
+          <input maxlength="2" minlength="2"
+            oninput="if(this.value.length > this.maxlength) this.value = this.value.slice(0, maxlength)"
+            id="input__days" class="main__input" type="text" placeholder="DD" />
+          <!-- error input required -->
+
+          <small> </small>
+
+        </div>
+
+        <!-- month -->
+        <div class="form__month">
+          <label id="label__month" class="main__label-month" for="month">month</label>
+          <input maxlength="2" minlength="2"
+            oninput="if(this.value.length > this.maxlength) this.value = this.value.slice(0, maxlength)"
+            id="input__months" class="main__input" type="text" placeholder="MM" />
+          <!-- input error required -->
+          <small></small>
+        </div>
+
+        <!-- year -->
+        <div class="form__year">
+          <label id="label__year" class="main__label-year" for="year">year</label>
+          <input maxlength="4" minlength="4"
+            oninput="if(this.value.length > this.maxlength) this.value = this.value.slice(0, maxlength)"
+            id="input__years" class="main__input" type="text" placeholder="YYYY" />
+          <!-- input error -->
+          <small></small>
+        </div>
+
+      </form>
+
+      <div class="main__button">
+        <div class="line"></div>
+        <button type="submit" class="button" id="button">
+          <img src="./assets/images/icon-arrow.svg" alt="" />
+        </button>
+      </div>
+    </div>
+
+    <!-- outputs -->
+    <div class="main__calculator">
+      <p class="calculator__years">
+        <span class="year__number" id="years">--</span> years
+      </p>
+
+      <p class="calculator__months" >
+        <span class="month__number" id="months">--</span> months
+      </p>
+
+      <p class="calculator__days">
+        <span class="day__number" id="days">--</span> days
+      </p>
+    </div>
+  </main>
+
+  <!-- <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div> -->
+</body>
+
+</html>
